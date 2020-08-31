@@ -159,7 +159,7 @@ class Validator
     public function validateString($value, $minimum, $maximum)
     {
         // Se verifica el contenido y la longitud de acuerdo con la base de datos.
-        if (preg_match('/^[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s\,\;\.]{'.$minimum.','.$maximum.'}$/', $value)) {
+        if (preg_match('/^[a-zA-Z0-9#ñÑáÁéÉíÍóÓúÚ\s\,\:\;\.\-\+]{'.$minimum.','.$maximum.'}$/', $value)) {
             return true;
         } else {
             return false;
@@ -177,24 +177,6 @@ class Validator
     {
         // Se verifica el contenido y la longitud de acuerdo con la base de datos.
         if (preg_match('/^[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{'.$minimum.','.$maximum.'}$/', $value)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /*
-    *   Método para validar una fecha.
-    *
-    *   Parámetros: $value (dato a validar).
-    *   
-    *   Retorno: booleano (true si el valor es correcto o false en caso contrario).
-    */
-    public function validateDate($value)
-    {
-        // Se dividen las partes de la fecha y se guardan en un arreglo en el siguiene orden: año, mes y día.
-        $date = explode('-', $value);
-        if (checkdate($date[1], $date[2], $date[0])) {
             return true;
         } else {
             return false;
@@ -246,6 +228,58 @@ class Validator
     {
         // Se verifica que la longitud de la contraseña sea de al menos 6 caracteres.
         if (strlen($value) >= 6) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /*
+    *   Método para validar el formato del DUI (Documento Único de Identidad).
+    *
+    *   Parámetros: $value (dato a validar).
+    *   
+    *   Retorno: booleano (true si el valor es correcto o false en caso contrario).
+    */
+    public function validateDUI($value)
+    {
+        // Se verifica que el número tenga el formato 00000000-0.
+        if (preg_match('/^[0-9]{8}[-][0-9]{1}$/', $value)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /*
+    *   Método para validar un número telefónico.
+    *
+    *   Parámetros: $value (dato a validar).
+    *   
+    *   Retorno: booleano (true si el valor es correcto o false en caso contrario).
+    */
+    public function validatePhone($value)
+    {
+        // Se verifica que el número tenga el formato 0000-0000 y que inicie con 2, 6 o 7.
+        if (preg_match('/^[2,6,7]{1}[0-9]{3}[-][0-9]{4}$/', $value)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /*
+    *   Método para validar una fecha.
+    *
+    *   Parámetros: $value (dato a validar).
+    *   
+    *   Retorno: booleano (true si el valor es correcto o false en caso contrario).
+    */
+    public function validateDate($value)
+    {
+        // Se dividen las partes de la fecha y se guardan en un arreglo en el siguiene orden: año, mes y día.
+        $date = explode('-', $value);
+        if (checkdate($date[1], $date[2], $date[0])) {
             return true;
         } else {
             return false;

@@ -46,7 +46,7 @@ class Commerce
                                     <ul class="right hide-on-med-and-down">
                                         <li><a href="index.php"><i class="material-icons left">local_offer</i>Productos</a></li>
                                         <li><a href="cart.php"><i class="material-icons left">shopping_cart</i>Carrito</a></li>
-                                        <li><a href="#"><i class="material-icons left">account_box</i>Usuario: <b>'.$_SESSION['id_cliente'].'</b></a></li>
+                                        <li><a href="#"><i class="material-icons left">account_box</i>Usuario: <b>'.$_SESSION['correo'].'</b></a></li>
                                         <li><a href="#" onclick="logOut()"><i class="material-icons left">close</i>Cerrar sesión</a></li>
                                     </ul>
                                 </div>

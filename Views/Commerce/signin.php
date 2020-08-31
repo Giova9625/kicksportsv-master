@@ -9,6 +9,7 @@ Commerce::headerTemplate('Registrarse');
     <!-- Formulario para crear cuenta -->
     <form method="post" id="register-form">
         <div class="row">
+        <!--Validacion pattern para nombres propios-->
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">account_box</i>
                 <input type="text" id="nombre" name="nombre" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" class="validate" required/>
@@ -24,14 +25,15 @@ Commerce::headerTemplate('Registrarse');
                 <input type="text" id="apodo" name="apodo" maxlength="100" class="validate" required/>
                 <label for="apodo">Apodo</label>
             </div>
+            <!--Validacion pattern para correo-->
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">email</i>
-                <input type="text" id="correo" name="correo" placeholder="Ingrese correo"  class="validate" required/>
+                <input type="text" id="correo" name="correo" placeholder="Ingrese correo"  class="validate" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
                 <label for="dui_cliente">Correo</label>
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">phone</i>
-                <input type="text" id="telefono" name="telefono" placeholder="0000-0000"  class="validate" required/>
+                <input type="text" id="telefono" name="telefono" placeholder="0000-0000" pattern="[2,6,7]{1}[0-9]{3}[-][0-9]{4}" class="validate" required/>
                 <label for="telefono">Teléfono</label>
             </div>
             <div class="input-field col s12 m6">
@@ -41,7 +43,7 @@ Commerce::headerTemplate('Registrarse');
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">domain</i>
-                <input type="text" id="ciudad" name="ciudad" class="validate" required/>
+                <input type="text" id="ciudad" name="ciudad" class="validate" pattern="[A-Za-z]{3}" title="Three letter country code" required/>
                 <label for="ciudad">Ciudad</label>
             </div>
             <div class="input-field col s12 m6">
@@ -49,15 +51,15 @@ Commerce::headerTemplate('Registrarse');
                 <input type="text" id="codigo_postal" name="codigo_postal" class="validate" required/>
                 <label for="codigo_postal">Codigo postal</label>
             </div>
-           
+           <!--Validacion pattern para password-->
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">security</i>
-                <input type="password" id="contra" name="contra" class="validate" required/>
+                <input type="password" id="contra" name="contra" class="validate" pattern=".{8,}" title="Eight or more characters" required/>
                 <label for="contra">Clave</label>
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">security</i>
-                <input type="password" id="contra2" name="contra2" class="validate" required/>
+                <input type="password" id="contra2" name="contra2" class="validate" pattern=".{8,}" title="Eight or more characters" required/>
                 <label for="contra2">Confirmar clave</label>
             </div>
             <div class="input-field col s12 m6">

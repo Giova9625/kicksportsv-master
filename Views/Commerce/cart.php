@@ -56,8 +56,8 @@ Commerce::headerTemplate('Carrito de compras');
                 <div class="input-field col s6 m4 offset-m4">
                     <!--combobox-->
                     <select class="browser-default" id="talla" name="talla" class="validate" required>
-                                <option value="" disabled selected>⠀Seleccione Talla</option>
-                            </select>
+                                
+                    </select>
                 </div>
             </div>
             <div class="row center-align">

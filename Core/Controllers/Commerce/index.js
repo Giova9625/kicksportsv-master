@@ -30,7 +30,7 @@ function readAllMarca()
                     <div class="col s12 m6 l4">
                         <div class="card hoverable">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="../../Resources/Img/marcas/${row.imagen_marca}" style="Width: 80px; Height:80px;" class="mr-1" alt="...">
+                                <img class="activator" src="../../Resources/Img/marcas/${row.imagen_marca}" class="mr-1" alt="...">
                             </div>
                             <div class="card-content">
                                 <span class="card-title activator grey-text text-darken-4">
