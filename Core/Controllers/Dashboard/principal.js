@@ -1,6 +1,6 @@
 // Constante para establecer la ruta y parámetros de comunicación con la API.
 const API_CLIENTES = '../../Core/Api/Dashboard/cliente.php?action=';
-const API_PEDIDOS = '../../Core/Api/Commerce/pedido.php?action=';
+const API_PEDIDOS = '../../Core/Api/Dashboard/pedido.php?action=';
 const API_PRODUCTOS = '../../Core/Api/Dashboard/productos.php?action=';
 
 
