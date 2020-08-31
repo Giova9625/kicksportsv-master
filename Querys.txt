@@ -1,0 +1,31 @@
+select * from producto
+select * from existencia
+select * from detalle_pedido
+select * from pedido
+select * from talla
+select * from marca
+select * from cliente
+
+SELECT producto, precio FROM producto
+                ORDER BY producto
+select count(id_pedido)as pedidos from pedido inner join cliente using(id_cliente)  group by nombre
+select id_pedido,apodo,total_pagar ,estado from pedido inner join cliente using(id_cliente)
+
+
+select apodo,count(apodo)as Pedidos from cliente inner join pedido using(id_cliente) group by apodo
+
+
+insert into detalle_pedido (id_producto,id_pedido,precio,cantida)
+values(38,45,29.99,1)
+
+insert into pedido (id_cliente,estado,fecha_entrega,total_pagar,fecha_pedido)
+		values(20,'En proceso','2020-08-19',79.98,'2020-08-15'),
+			  (19,'Enviado','2020-08-23',179.99,'2020-08-20'),
+			  (19,'Enviado','2020-08-23',29.99,'2020-08-20'),
+			  (21,'En proceso','2020-08-20,',99.95,'2020-08-20')
+			  (22,'Finalizado','2020-08-14,',129.94,'2020-08-18')
+			  
+insert into cliente (nombre,apellido,apodo,correo,contra,direccion,departamento,telefono,genero,ciudad,fecha_registro,imagen_cliente,codigo_postal)
+			  VALUES('Juliana','Castillo','JullyCas33','Castillo55@gmail.com','123456','calle carretas 55 mejicanos','Santa Ana','89765432','Femenino','Chalcuapa','2020-09-9','','1224')
+			  
+Select producto, precio from producto			  

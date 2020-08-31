@@ -1,0 +1,153 @@
+.imagen{
+    margin: 30px;
+    padding: 0px;
+    background-image: url(../Img/mujer_camiseta.png);
+    color: white;
+    font-family: sans-serif;
+    width: 484px;
+    height: 568px;
+}
+
+.info{
+    position: absolute;
+    overflow: hidden;
+    width: 484px;
+    height: 568px;
+    background-color: rgba(31,31,31,0.9);
+    -webkit-transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.imagen:hover .info{
+    opacity: 1;
+}
+
+.headline{
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    -webkit-transition: 0.5s;
+    margin-left: -70px;
+    font-size: 21px;
+}
+
+.imagen:hover .headline{
+    margin-left: 70px;
+}
+
+.info2{
+    margin: auto    ;
+    width: 464px;
+    text-align: center;
+    -webkit-transition: margin 0.6s;
+    margin-top: 558px;
+}
+
+.imagen:hover .info2{
+    margin-top: 70px;
+}
+
+.imagen-h{
+    margin: 30px;
+    padding: 0px;
+    background-image: url(../Img/hombre_camiseta.png);
+    color: white;
+    font-family: sans-serif;
+    width: 493px;
+    height: 569px;
+}
+
+.info-h{
+    position: absolute;
+    overflow: hidden;
+    width: 494px;
+    height: 569px;
+    background-color: rgba(31,31,31,0.9);
+    -webkit-transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.imagen-h:hover .info-h{
+    opacity: 1;
+}
+
+.headline-h{
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    -webkit-transition: 0.5s;
+    margin-left: -70px;
+    font-size: 21px;
+}
+
+.imagen-h:hover .headline-h{
+    margin-left: 70px;
+}
+
+.info2-h{
+    margin: auto    ;
+    width: 464px;
+    text-align: center;
+    -webkit-transition: margin 0.6s;
+    margin-top: 558px;
+}
+
+.imagen-h:hover .info2-h{
+    margin-top: 70px;
+}
+
+.producto{
+    text-align: center;
+    font-family: bold;
+    color: white ;
+}
+
+.nosotros{
+    text-align: center;
+    font-family: bold;
+    color: white;
+}
+
+.contacto{
+  text-align: center;
+}
+
+
+.contactenos{
+    text-align: center;
+    font-family: bold;
+    color: white;
+}
+
+.preguntas{
+    text-align: center;
+    font-family: bold;
+    color: white;
+}
+
+.link{
+    text-align: center;
+
+}
+
+.link-h{
+    text-align: center;
+
+}
+
+.botonp{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #6E6E6E;
+    border-radius: 6px;
+    border: 2px solid #000000;
+}
+
+.contactos{
+    display:flex;
+    justify-content: center;
+}
+
