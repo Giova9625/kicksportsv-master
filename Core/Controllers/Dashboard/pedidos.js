@@ -1,5 +1,5 @@
 // Constante para establecer la ruta y parámetros de comunicación con la API.
-const API_PEDIDOS = '../../Core/Api/Commerce/pedido.php?action=';
+const API_PEDIDOS = '../../Core/Api/Dashboard/pedido.php?action=';
 
 // Método que se ejecuta cuando el documento está listo.
 $( document ).ready(function() {

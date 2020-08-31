@@ -105,16 +105,6 @@ class Dashboard
 								</a>
 							</li>
 							<li class="full-width">
-								<a href="comentarios.php" class="full-width">
-									<div class="navLateral-body-cl">
-										<i class="zmdi zmdi-comment-alt-text"></i>
-									</div>
-									<div class="navLateral-body-cr">
-										COMENTARIOS
-									</div>
-								</a>
-							</li>
-							<li class="full-width">
 								<a href="noticias.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-image-alt"></i>
@@ -182,18 +172,6 @@ class Dashboard
 							</div>
 						</a>
 					</li>
-					<li class="full-width divider-menu-h"></li>
-					<li class="full-width">
-						<a href="inventario.php" class="full-width">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-truck"></i>
-							</div>
-							<div class="navLateral-body-cr">
-								INVENTARIO
-							</div>
-						</a>
-					</li>
-					
 				</ul>
 			</nav>
 		</div>
