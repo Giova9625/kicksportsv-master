@@ -8,6 +8,8 @@ Commerce::headerTemplate('Registrarse');
     <h4 class="center-align indigo-text">Regístrate como Cliente</h4>
     <!-- Formulario para crear cuenta -->
     <form method="post" id="register-form">
+        <!-- Campo oculto para asignar el token del reCAPTCHA -->
+        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"/>
         <div class="row">
         <!--Validacion pattern para nombres propios-->
             <div class="input-field col s12 m6">
@@ -33,7 +35,7 @@ Commerce::headerTemplate('Registrarse');
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">phone</i>
-                <input type="text" id="telefono" name="telefono" placeholder="0000-0000" pattern="[2,6,7]{1}[0-9]{3}[-][0-9]{4}" class="validate" required/>
+                <input type="text" id="telefono" name="telefono" placeholder="00000000" pattern="[2,6,7]{1}[0-9]{3}[0-9]{4}" class="validate" required/>
                 <label for="telefono">Teléfono</label>
             </div>
             <div class="input-field col s12 m6">
@@ -43,7 +45,7 @@ Commerce::headerTemplate('Registrarse');
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">domain</i>
-                <input type="text" id="ciudad" name="ciudad" class="validate" pattern="[A-Za-z]{3}" title="Three letter country code" required/>
+                <input type="text" id="ciudad" name="ciudad" class="validate" pattern="[A-Za-z]{}" required/>
                 <label for="ciudad">Ciudad</label>
             </div>
             <div class="input-field col s12 m6">
@@ -97,6 +99,8 @@ Commerce::headerTemplate('Registrarse');
     </form>
 </div>
 
+<!-- Importación del archivo para que funcione el reCAPTCHA. Para más información https://developers.google.com/recaptcha/docs/v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdBzLQUAAAAAJvH-aCUUJgliLOjLcmrHN06RFXT"></script>
 
 <?php
 Commerce::footerTemplate('cliente.js');

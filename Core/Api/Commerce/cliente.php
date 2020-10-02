@@ -31,6 +31,38 @@ if (isset($_GET['action'])) {
         switch ($_GET['action']) {
             case 'register':
                 $_POST = $cliente->validateForm($_POST);
+                 // Se sanea el valor del token para evitar datos maliciosos.
+                $token = filter_input(INPUT_POST, 'g-recaptcha-response', FILTER_SANITIZE_STRING);
+                if ($token) {
+                    $secretKey = '6LdBzLQUAAAAAL6oP4xpgMao-SmEkmRCpoLBLri-';
+                    $ip = $_SERVER['REMOTE_ADDR'];
+
+                    $data = array(
+                        'secret' => $secretKey,
+                        'response' => $token,
+                        'remoteip' => $ip
+                    );
+
+                    $options = array(
+                        'http' => array(
+                            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                            'method'  => 'POST',
+                            'content' => http_build_query($data)
+                        ),
+                        'ssl' => array(
+                            'verify_peer' => false,
+                            'verify_peer_name' => false
+                        )
+                    );
+
+                    $url = 'https://www.google.com/recaptcha/api/siteverify';
+                    $context  = stream_context_create($options);
+                    $response = file_get_contents($url, false, $context);
+                    $captcha = json_decode($response, true);
+
+                    if ($captcha['success']) 
+                    {
+
                         if ($cliente->setNombre($_POST['nombre'])) 
                         {
                             if ($cliente->setApellido($_POST['apellido'])) 
@@ -98,6 +130,12 @@ if (isset($_GET['action'])) {
                         } else {
                             $result['exception'] = 'Nombres incorrectos';
                         }
+                    } else {
+                        $result['exception'] = 'No eres un humano';
+                    }
+                } else {
+                    $result['exception'] = 'Ocurrió un problema al cargar el reCAPTCHA';
+                }
                     
                 break;
                         /*
