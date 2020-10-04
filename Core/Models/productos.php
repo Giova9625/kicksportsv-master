@@ -12,7 +12,7 @@ class Productos extends Validator
     private $imagen = null;
     private $archivo = null;
     private $nombre = null;
-    private $ruta = '../../../Resources/Img/Productos/';
+    private $ruta = '../../../Resources/Img/productos/';
 
     /*
     *   Métodos para asignar valores a los atributos.
