@@ -46,7 +46,10 @@ class Commerce
                                     <ul class="right hide-on-med-and-down">
                                         <li><a href="index.php"><i class="material-icons left">local_offer</i>Productos</a></li>
                                         <li><a href="cart.php"><i class="material-icons left">shopping_cart</i>Carrito</a></li>
-                                        <li><a href="#"><i class="material-icons left">account_box</i>Usuario: <b>'.$_SESSION['correo'].'</b></a></li>
+                                        <li><a href="#" class="dropdown-trigger" data-target="dropdown"><i class="material-icons left">verified_user</i>Cuenta: <b>'.$_SESSION['correo'].'</b></a></li>
+                                    </ul>
+                                    <ul id="dropdown" class="dropdown-content">
+                                        <li><a href="#password-modal" class="modal-trigger"><i class="material-icons">lock</i>Cambiar clave</a></li>
                                         <li><a href="#" onclick="logOut()"><i class="material-icons left">close</i>Cerrar sesión</a></li>
                                     </ul>
                                 </div>
@@ -55,7 +58,11 @@ class Commerce
                         <ul class="sidenav" id="mobile">
                             <li><a href="index.php"><i class="material-icons left">local_offer</i>Productos</a></li>
                             <li><a href="cart.php"><i class="material-icons left">shopping_cart</i>Carrito</a></li>
-                            <li><a href="#" onclick="logOut()"><i class="material-icons left">close</i>Cerrar sesión</a></li>
+                            <li><a class="dropdown-trigger" href="#" data-target="dropdown-mobile"><i class="material-icons">verified_user</i>Cuenta: <b>'.$_SESSION['correo'].'</b></a></li>
+                        </ul>
+                        <ul id="dropdown-mobile" class="dropdown-content">
+                            <li><a href="#password-modal" class="modal-trigger">Cambiar clave</a></li>
+                            <li><a href="#" onclick="signOff()">Salir</a></li>
                         </ul>
                     </header>
                     <main>
@@ -166,56 +173,43 @@ class Commerce
     {
         // Se imprime el código HTML de las cajas de dialogo (modals).
         print('
-            <!-- Componente Modal para mostrar los Términos y condiciones -->
-            <div id="terminos" class="modal">
-                <div class="modal-content">
-                    <h4 class="center-align">TÉRMINOS Y CONDICIONES</h4>
-                    <p>Nuestra empresa ofrece los mejores productos a nivel nacional con una calidad garantizada y...</p>
-                </div>
-                <div class="divider"></div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close btn waves-effect"><i class="material-icons">done</i></a>
-                </div>
+        <!-- Componente Modal para mostrar el formulario de cambiar contraseña -->
+        <div id="password-modal" class="modal">
+            <div class="modal-content">
+                <h4 class="center-align">Cambiar contraseña</h4>
+                <form method="post" id="password-form">
+                    <div class="row center-align">
+                        <label>CLAVE ACTUAL</label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12">
+                            <i class="material-icons prefix">security</i>
+                            <input id="clave_actual_1" type="password" name="clave_actual_1" class="validate" required/>
+                            <label for="clave_actual_1">Clave</label>
+                        </div>
+                    </div>
+                    <div class="row center-align">
+                        <label>CLAVE NUEVA</label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">security</i>
+                            <input id="clave_nueva_1" type="password" name="clave_nueva_1" class="validate" required/>
+                            <label for="clave_nueva_1">Clave</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">security</i>
+                            <input id="clave_nueva_2" type="password" name="clave_nueva_2" class="validate" required/>
+                            <label for="clave_nueva_2">Confirmar clave</label>
+                        </div>
+                    </div>
+                    <div class="row center-align">
+                        <a href="#" class="btn waves-effect grey tooltipped modal-close" data-tooltip="Cancelar"><i class="material-icons">cancel</i></a>
+                        <button type="submit" class="btn waves-effect blue tooltipped" data-tooltip="Guardar"><i class="material-icons">save</i></button>
+                    </div>
+                </form>
             </div>
-
-            <!-- Componente Modal para mostrar la Misión -->
-            <div id="mision" class="modal">
-                <div class="modal-content">
-                    <h4 class="center-align">MISIÓN</h4>
-                    <p>Ofrecer los mejores productos a nivel nacional para satisfacer a nuestros clientes y...</p>
-                </div>
-                <div class="divider"></div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close btn waves-effect"><i class="material-icons">done</i></a>
-                </div>
-            </div>
-
-            <!-- Componente Modal para mostrar la Visión -->
-            <div id="vision" class="modal">
-                <div class="modal-content">
-                    <h4 class="center-align">VISIÓN</h4>
-                    <p>Ser la empresa lider en la región ofreciendo productos de calidad a precios accesibles y...</p>
-                </div>
-                <div class="divider"></div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close btn waves-effect"><i class="material-icons">done</i></a>
-                </div>
-            </div>
-
-            <!-- Componente Modal para mostrar los Valores -->
-            <div id="valores" class="modal">
-                <div class="modal-content center-align">
-                    <h4>VALORES</h4>
-                    <p>Responsabilidad</p>
-                    <p>Honestidad</p>
-                    <p>Seguridad</p>
-                    <p>Calidad</p>
-                </div>
-                <div class="divider"></div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close btn waves-effect"><i class="material-icons">done</i></a>
-                </div>
-            </div>
+        </div>
         ');
     }
 }

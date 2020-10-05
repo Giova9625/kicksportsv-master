@@ -15,6 +15,8 @@ $( document ).ready(function() {
     $( '.parallax' ).parallax();
     // Se inicializa el componente Sidenav para que funcione el menú lateral.
     $( '.sidenav' ).sidenav();
+    // Se inicializa el componente Dropdown para que funcione la lista desplegable en los menús.
+    $( '.dropdown-trigger' ).dropdown();
     // Se inicializa el componente Modal para que funcionen las cajas de dialogo.
     $( '.modal' ).modal();
     // Se inicializa el componente Tooltip asignado a botones y enlaces para que funcionen las sugerencias textuales.

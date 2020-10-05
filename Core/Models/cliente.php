@@ -244,6 +244,15 @@ class Clientes extends Validator
         }
     }
 
+
+    public function changePassword()
+    {
+        $hash = password_hash($this->contra, PASSWORD_DEFAULT);
+        $sql = 'UPDATE cliente SET contra = ? WHERE id_cliente = ?';
+        $params = array($hash, $this->id);
+        return Database::executeRow($sql, $params);
+    }
+
     public function editProfile()
     {
         $sql = 'UPDATE administrador 

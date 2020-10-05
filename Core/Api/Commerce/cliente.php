@@ -14,7 +14,8 @@ if (isset($_GET['action'])) {
     // Se verifica si existe una sesión iniciada como cliente para realizar las acciones correspondientes.
     if (isset($_SESSION['id_cliente'])) {
         // Se compara la acción a realizar cuando un cliente ha iniciado sesión.
-        switch ($_GET['action']) {
+        switch ($_GET['action']) 
+        {
             case 'logout':
                 if (session_destroy()) {
                     $result['status'] = 1;
@@ -23,6 +24,52 @@ if (isset($_GET['action'])) {
                     $result['exception'] = 'Ocurrió un problema al cerrar la sesión';
                 }
                 break;
+                case 'readProfile':
+                    if ($cliente->setId($_SESSION['id_cliente'])) {
+                        if ($result['dataset'] = $cliente->readOneCliente()) {
+                            $result['status'] = 1;
+                        } else {
+                            $result['exception'] = 'Cliente inexistente';
+                        }
+                    } else {
+                        $result['exception'] = 'Cliente incorrecto';
+                    }
+                    break;
+                    case 'password':
+                        if ($cliente->setId($_SESSION['id_cliente'])) 
+                        {
+                            $_POST = $cliente->validateForm($_POST);
+                                if ($cliente->setContra($_POST['clave_actual_1'])) 
+                                {
+                                    if ($cliente->checkPassword($_POST['clave_actual_1'])) 
+                                    {
+                                        if ($_POST['clave_nueva_1'] == $_POST['clave_nueva_2']) 
+                                        {
+                                            if ($cliente->setContra($_POST['clave_nueva_1'])) 
+                                            {
+                                                if ($cliente->changePassword()) 
+                                                {
+                                                    $result['status'] = 1;
+                                                    $result['message'] = 'Contraseña cambiada correctamente';
+                                                } else {
+                                                    $result['exception'] = Database::getException();
+                                                }
+                                            } else {
+                                                $result['exception'] = 'Clave nueva menor a 6 caracteres';
+                                            }
+                                        } else {
+                                            $result['exception'] = 'Claves nuevas diferentes';
+                                        }
+                                    } else {
+                                        $result['exception'] = 'Clave actual incorrecta';
+                                    }
+                                } else {
+                                    $result['exception'] = 'Clave actual menor a 6 caracteres';
+                                }
+                        } else {
+                            $result['exception'] = 'Usuario incorrecto';
+                        }
+                        break;    
             default:
                 exit('Acción no disponible dentro de la sesión');
         }
@@ -159,6 +206,7 @@ if (isset($_GET['action'])) {
                     $result['exception'] = 'Alias incorrecto';
                 }
             break;
+            
             default:
                 exit('Acción no disponible fuera de la sesión');
         }
