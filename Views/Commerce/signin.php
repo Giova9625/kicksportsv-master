@@ -28,8 +28,8 @@ Commerce::headerTemplate('Registrarse');
             <!--Validacion pattern para correo-->
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">email</i>
-                <input type="text" id="correo" name="correo" placeholder="Ingrese correo"  class="validate" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
-                <label for="dui_cliente">Correo</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingrese correo"  class="validate" required/>
+                <label for="correo">Correo</label>
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">phone</i>
@@ -43,7 +43,7 @@ Commerce::headerTemplate('Registrarse');
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">domain</i>
-                <input type="text" id="ciudad" name="ciudad" class="validate" pattern="[A-Za-z]{3}" title="Three letter country code" required/>
+                <input type="text" id="ciudad" name="ciudad" class="validate" required/>
                 <label for="ciudad">Ciudad</label>
             </div>
             <div class="input-field col s12 m6">

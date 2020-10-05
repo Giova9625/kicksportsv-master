@@ -16,12 +16,9 @@ if (isset($_GET['action'])) {
         // Se compara la acción a realizar cuando un cliente ha iniciado sesión.
         switch ($_GET['action']) {
             case 'logout':
-                if (session_destroy()) {
-                    $result['status'] = 1;
-                    $result['message'] = 'Sesión eliminada correctamente';
-                } else {
-                    $result['exception'] = 'Ocurrió un problema al cerrar la sesión';
-                }
+                unset($_SESSION['id_cliente']);
+                $result['status'] = 1;
+                $result['message'] = 'Sesión cerrada correctamente';
                 break;
             default:
                 exit('Acción no disponible dentro de la sesión');
