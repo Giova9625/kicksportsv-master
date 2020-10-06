@@ -23,7 +23,7 @@ Dashboard::headerTemplate('Administrar marcas');
 							</div>
 							<div class="full-width panel-content">
 				
-								<form  method="post" id="search-form">
+								<form  method="post" id="search-form" autocomplete="off">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
 									<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
 									<i class="zmdi zmdi-search"></i>
@@ -68,7 +68,7 @@ Dashboard::headerTemplate('Administrar marcas');
 					<div class="mdl-cell mdl-cell--12-col">
 						<div class="full-width panel mdl-shadow--2dp">
 							<div class="full-width panel-content">
-								<form  method="post" id="crtform" enctype="multipart/form-data" >
+								<form  method="post" id="crtform" enctype="multipart/form-data" autocomplete="off">
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--12-col">
 									        <legend class="text-condensedLight"><i class="zmdi zmdi-border-color"></i> &nbsp; Datos de la marca</legend><br>
@@ -111,7 +111,7 @@ Dashboard::headerTemplate('Administrar marcas');
 					<div class="mdl-cell mdl-cell--12-col">
 						<div class="full-width panel mdl-shadow--2dp">
 							<div class="full-width panel-content">
-								<form  method="post" id="uptform" enctype="multipart/form-data" >
+								<form  method="post" id="uptform" enctype="multipart/form-data" autocomplete="off">
 								<input class="hide" type="text" id="id_marca2" name="id_marca2"/>
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--12-col">

@@ -11,7 +11,7 @@ $_SESSION['10']=time();
     <!-- Título para la página web -->
     <h4 class="center-align indigo-text">Iniciar sesión</h4>
     <!-- Formulario para iniciar sesión -->
-    <form method="post" id="session-form">
+    <form method="post" id="session-form" autocomplete="off">
         <div class="row">
             <div class="input-field col s12 m4 offset-m4">
                 <i class="material-icons prefix">email</i>

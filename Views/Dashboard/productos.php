@@ -24,7 +24,7 @@ Dashboard::headerTemplate('Administrar productos');
 							</div>
 							<div class="full-width panel-content">
 				
-								<form  method="post" id="search-form">
+								<form  method="post" id="search-form" autocomplete="off">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
 									<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
 									<i class="zmdi zmdi-search"></i>
@@ -83,7 +83,7 @@ Dashboard::headerTemplate('Administrar productos');
 					<div class="mdl-cell mdl-cell--12-col">
 						<div class="full-width panel mdl-shadow--2dp">
 							<div class="full-width panel-content">
-								<form method="post" id="crtform" enctype="multipart/form-data">
+								<form method="post" id="crtform" enctype="multipart/form-data" autocomplete="off">
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

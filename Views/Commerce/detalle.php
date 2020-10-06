@@ -21,7 +21,7 @@ Commerce::headerTemplate('Detalles del producto');
                 </div>
                 <div class="card-action">
                     <!-- Formulario de cantidad para agregar el producto al carrito de compras -->
-                    <form method="post" id="shopping-form">
+                    <form method="post" id="shopping-form" autocomplete="off">
                         <!-- Campos ocultos para asignar los datos del producto -->
                         <input type="number" id="id_producto" name="id_producto" class="hide"/>
                         <input type="number" id="cost" name="cost" step="0.01" class="hide"/>

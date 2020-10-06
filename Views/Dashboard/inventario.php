@@ -46,7 +46,7 @@ Dashboard::headerTemplate('Administrar existencias');
 					<div class="mdl-cell mdl-cell--12-col">
 						<div class="full-width panel mdl-shadow--2dp">
 							<div class="full-width panel-content">
-								<form method="post" id="crtform" enctype="multipart/form-data">
+								<form method="post" id="crtform" enctype="multipart/form-data" autocomplete="off">
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

@@ -44,7 +44,7 @@ Commerce::headerTemplate('Carrito de compras');
         <!-- Título para la caja de dialogo -->
         <h4 class="center-align">Cambiar cantidad</h4>
         <!-- Formulario para crear o actualizar un registro -->
-        <form method="post" id="item-form">
+        <form method="post" id="item-form" autocomplete="off">
             <!-- Campo oculto para asignar el id del registro al momento de modificar -->
             <input type="number" id="id_detalle" name="id_detalle" class="hide"/>
             <div class="row">

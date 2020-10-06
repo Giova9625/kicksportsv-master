@@ -7,7 +7,7 @@ Commerce::headerTemplate('Registrarse');
     <!-- Título para la página web -->
     <h4 class="center-align indigo-text">Regístrate como Cliente</h4>
     <!-- Formulario para crear cuenta -->
-    <form method="post" id="register-form">
+    <form method="post" id="register-form" autocomplete="off">
         <div class="row">
         <!--Validacion pattern para nombres propios-->
             <div class="input-field col s12 m6">
