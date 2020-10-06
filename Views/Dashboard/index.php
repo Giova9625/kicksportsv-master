@@ -22,8 +22,8 @@
 			<p class="text-center text-condensedLight">INGRESA CON TU CUENTA</p>
 			<form id="login_form" method="post">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				    <input class="mdl-textfield__input" type="text" id="usuario" name="usuario">
-				    <label class="mdl-textfield__label" for="usuario">Correo electronico</label>
+				    <input class="mdl-textfield__input" type="text" id="usuario" name="usuario" >
+				    <label class="mdl-textfield__label" for="usuario">Nombre de usuario</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				    <input class="mdl-textfield__input" type="password" id="contra" name="contra">

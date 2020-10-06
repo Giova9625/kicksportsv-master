@@ -77,14 +77,14 @@ Dashboard::headerTemplate('Administrar tallas');
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input id="talla1" name="talla1"  type="text" class="mdl-textfield__input validate" required>
+												<input id="talla1" name="talla1"  type="text" class="mdl-textfield__input validate" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,4}" maxlenght="4" required>
 												<label class="mdl-textfield__label" for="talla1">Talla</label>
 											</div>
 									    </div>
 
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<textarea id="descripcion1" name="descripcion1" class="mdl-textfield__input validate" type="text" rows= "3" ></textarea>
+												<textarea id="descripcion1" name="descripcion1" class="mdl-textfield__input validate" pattern="[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s]{1,45}"  maxlength="45" type="text" rows= "3" ></textarea>
 												<label class="mdl-textfield__label" for="description1">Descripcion de la talla</label>
 											</div>
 										</div>
@@ -120,14 +120,14 @@ Dashboard::headerTemplate('Administrar tallas');
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input id="talla2" name="talla2"  type="text" class="mdl-textfield__input validate" required>
+												<input id="talla2" name="talla2"  type="text" class="mdl-textfield__input validate" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,4}" maxlenght="4" required>
 												<label class="mdl-textfield__label" for="talla2">Talla</label>
 											</div>
 									    </div>
 
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<textarea id="descripcion2" name="descripcion2" class="mdl-textfield__input validate" type="text" rows= "3" ></textarea>
+												<textarea id="descripcion2" name="descripcion2" class="mdl-textfield__input validate" type="text" pattern="[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s]{1,45}"  maxlength="45" rows= "3" ></textarea>
 												<label class="mdl-textfield__label" for="description2">Descripcion de la talla</label>
 											</div>
 										</div>
