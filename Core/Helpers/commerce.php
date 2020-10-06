@@ -61,8 +61,8 @@ class Commerce
                             <li><a class="dropdown-trigger" href="#" data-target="dropdown-mobile"><i class="material-icons">verified_user</i>Cuenta: <b>'.$_SESSION['correo'].'</b></a></li>
                         </ul>
                         <ul id="dropdown-mobile" class="dropdown-content">
-                            <li><a href="#password-modal" class="modal-trigger">Cambiar clave</a></li>
-                            <li><a href="#" onclick="signOff()">Salir</a></li>
+                            <li><a href="#password-modal" class="modal-trigger"><i class="material-icons left">lock</i>Cambiar clave</a></li>
+                            <li><a href="#" onclick="logOut()"><i class="material-icons left">close</i>Cerrar sesión</a></li>
                         </ul>
                     </header>
                     <main>
