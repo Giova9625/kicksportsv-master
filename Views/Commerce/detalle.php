@@ -3,6 +3,10 @@ require_once('../../core/helpers/commerce.php');
 Commerce::headerTemplate('Detalles del producto');
 ?>
 
+<?php
+include('../../core/helpers/inactividad.php'); 
+?>
+
 <!-- Contenedor para mostrar el detalle del producto seleccionado previamente -->
 <div class="container">
     <!-- Título para la página web -->
@@ -21,7 +25,7 @@ Commerce::headerTemplate('Detalles del producto');
                 </div>
                 <div class="card-action">
                     <!-- Formulario de cantidad para agregar el producto al carrito de compras -->
-                    <form method="post" id="shopping-form">
+                    <form method="post" id="shopping-form" autocomplete="off">
                         <!-- Campos ocultos para asignar los datos del producto -->
                         <input type="number" id="id_producto" name="id_producto" class="hide"/>
                         <input type="number" id="cost" name="cost" step="0.01" class="hide"/>

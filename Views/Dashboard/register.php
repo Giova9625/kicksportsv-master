@@ -11,7 +11,7 @@ Dashboard::headerTemplate('Registrar primer usuario');
 			<p class="text-center" style="font-size: 80px;">
 				<i class="zmdi zmdi-account-circle"></i>
 			</p>
-			<form method="post" id="register-form">
+			<form method="post" id="register-form" autocomplete="off">
 				
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
                     <input id="nombre" type="text" name="nombre" class="validate" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" required/>

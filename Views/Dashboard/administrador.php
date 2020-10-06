@@ -4,6 +4,10 @@ require_once('../../Core/Helpers/dashboard.php');
 Dashboard::headerTemplate('Administrar usuarios');
 ?>
 
+<?php
+include('../../core/helpers/inactividadpriv.php'); 
+?>
+
 		<!--contenido de la pagina-->
 		<section class="full-width header-well">
 			<div class="full-width header-well-icon">
@@ -31,7 +35,7 @@ Dashboard::headerTemplate('Administrar usuarios');
 							</div>
 							<div class="full-width panel-content">
 									<!--Formulario para poder agregar un administrador-->
-								<form method="post" id="save-form" >
+								<form method="post" id="save-form" autocomplete="off">
 								<input class="hide" type="text" id="id_administrador" name="id_administrador"/>
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--12-col">
@@ -101,7 +105,7 @@ Dashboard::headerTemplate('Administrar usuarios');
 							</div>
 							<div class="full-width panel-content">
 				
-								<form  method="post" id="search-form">
+								<form  method="post" id="search-form" autocomplete="off">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
 									<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
 									<i class="zmdi zmdi-search"></i>
@@ -147,7 +151,7 @@ Dashboard::headerTemplate('Administrar usuarios');
 			   <div class="full-width panel-tittle bg-info text-center tittles  mdl-cell--12-col-phone">
 				   Actualizar administrador
 			   </div>
-			   <form method="post" >
+			   <form method="post" autocomplete="off">
 				<div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--12-col">
 						<legend class="text-condensedLight"><i class="zmdi zmdi-border-color"></i> &nbsp; DATOS DEL ADMINISTRADOR</legend><br>

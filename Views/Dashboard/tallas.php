@@ -3,6 +3,10 @@
 require_once('../../Core/Helpers/dashboard.php');
 Dashboard::headerTemplate('Administrar tallas');
 ?>
+
+<?php
+include('../../core/helpers/inactividadpriv.php'); 
+?>
 		
 		
 		
@@ -25,7 +29,7 @@ Dashboard::headerTemplate('Administrar tallas');
 							</div>
 							<div class="full-width panel-content">
 				
-								<form  method="post" id="search-form">
+								<form  method="post" id="search-form" autocomplete="off">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
 									<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
 									<i class="zmdi zmdi-search"></i>

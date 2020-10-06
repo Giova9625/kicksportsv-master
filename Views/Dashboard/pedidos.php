@@ -3,6 +3,10 @@
 require_once('../../Core/Helpers/dashboard.php');
 Dashboard::headerTemplate('Administrar pedidos');
 ?>
+
+<?php
+include('../../core/helpers/inactividadpriv.php'); 
+?>
 	<section class="full-width header-well">
 			<div class="full-width header-well-icon">
 				<i class="zmdi zmdi-store"></i>
@@ -23,7 +27,7 @@ Dashboard::headerTemplate('Administrar pedidos');
 							</div>
 							<div class="full-width panel-content">
 				
-								<form  method="post" id="search-form">
+								<form  method="post" id="search-form" autocomplete="off">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
 									<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
 									<i class="zmdi zmdi-search"></i>

@@ -5,6 +5,10 @@ require_once('../../Core/Helpers/dashboard.php');
 Dashboard::headerTemplate('Bienvenido');
 ?>
 
+<?php
+include('../../core/helpers/inactividadpriv.php'); 
+?>
+
 
 
 		<section class="full-width text-center" style="padding: 40px 0;">
