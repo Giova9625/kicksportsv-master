@@ -232,6 +232,20 @@ class Clientes extends Validator
         }
     }
 
+    public function checkCorreo()
+    {
+        $sql = 'SELECT nombre, apellido, id_cliente FROM cliente WHERE correo = ?';
+        $params = array($this->correo);
+        if ( $data = Database::getRow($sql, $params)) {
+            $this->nombre = $data['nombre'];
+            $this->apellido = $data['apellido'];
+            $this->id = $data['id_cliente'];
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function checkPassword($contra)
     {
         $sql = 'SELECT contra FROM cliente WHERE id_cliente = ?';
@@ -258,7 +272,7 @@ class Clientes extends Validator
         $sql = 'UPDATE administrador 
                 SET nombre_admin = ?, apel_admin = ?, usu_admin = ?, email_admin = ?, id_tipo_u =?
                 WHERE id_admin = ?';
-        $params = array($this->nombres, $this->apellidos, $this->usuario, $this->correo, $this->tipo, $this->id);
+        $params = array($this->nombre, $this->apellido, $this->usuario, $this->correo, $this->tipo, $this->id);
         return Database::executeRow($sql, $params);
     }
 

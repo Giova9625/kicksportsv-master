@@ -45,7 +45,7 @@ Commerce::headerTemplate('Registrarse');
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">domain</i>
-                <input type="text" id="ciudad" name="ciudad" class="validate" pattern="[A-Za-z]{}" required/>
+                <input type="text" id="ciudad" name="ciudad" class="validate" required/>
                 <label for="ciudad">Ciudad</label>
             </div>
             <div class="input-field col s12 m6">
