@@ -76,7 +76,7 @@ Dashboard::headerTemplate('Administrar marcas');
 									   
 									    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--12-col">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input id="nombre1" name="nombre1" type="text" class="mdl-textfield__input validate" required >
+												<input id="nombre1" name="nombre1" type="text" class="mdl-textfield__input validate" pattern="[a-zA-Z0-9#ñÑáÁéÉíÍóÓúÚ\s\,\:\;\.\-\+]{1,15}" maxlenght="15" required >
 												<label class="mdl-textfield__label" for="nombre1">Marca</label>
 											</div>
 										</div>
@@ -120,7 +120,7 @@ Dashboard::headerTemplate('Administrar marcas');
 									   
 									    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input id="nombre2" name="nombre2" type="text" class="mdl-textfield__input validate" required >
+												<input id="nombre2" name="nombre2" type="text" class="mdl-textfield__input validate" pattern="[a-zA-Z0-9#ñÑáÁéÉíÍóÓúÚ\s\,\:\;\.\-\+]{1,15}" maxlenght="15" required >
 												<label class="mdl-textfield__label" for="nombre2">Marca</label>
 											</div>
 										</div>

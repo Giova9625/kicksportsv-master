@@ -1,0 +1,15 @@
+.error img{
+    width: 900px;
+    height: 500px;
+    display:block;
+    margin:auto;
+}
+
+.reload img{
+    width: 100px;
+    height: 100px;
+    display:block;
+    margin:auto;
+    
+}
+

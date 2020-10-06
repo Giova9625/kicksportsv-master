@@ -14,12 +14,12 @@ Dashboard::headerTemplate('Registrar primer usuario');
 			<form method="post" id="register-form">
 				
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                    <input id="nombre" type="text" name="nombre" class="validate" required/>
+                    <input id="nombre" type="text" name="nombre" class="validate" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" required/>
             	    <label for="nombre">Nombre</label>
 				</div>
 
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input id="apellido" type="text" name="apellido" class="validate" required/>
+                    <input id="apellido" type="text" name="apellido" class="validate" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" required/>
                     <label for="apellido">Apellido</label>
 				</div>
 
@@ -29,18 +29,22 @@ Dashboard::headerTemplate('Registrar primer usuario');
 				</div>
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                   <input id="usuario" type="text" name="usuario" class="validate" required/>
+                   <input id="usuario" type="text" name="usuario" class="validate" pattern="[A-Za-z0-9]{5,20}"
+					title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 20" required/>
+					   
                    <label for="usuario">Usuario</label>
 				</div>
 
                
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                   <input id="clave1" type="password" name="clave1" class="validate" required/>
+				   <input id="clave1" type="password" name="clave1" class="validate" minlength="8" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" 
+				   title="La contraseña debe empezar con una letra contener minusculas, mayusculas y contener al menos un dígito" required/>
                    <label for="clave1">Contraseña</label>
 				</div>
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                   <input id="clave2" type="password" name="clave2" class="validate" required/>
+                   <input id="clave2" type="password" name="clave2" class="validate" minlength="8" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" 
+				   title="La contraseña debe empezar con una letra contener minusculas, mayusculas y contener al menos un dígito" required/>
                    <label for="clave2">Confirmar</label>
 				</div> 
 

@@ -77,13 +77,13 @@ Dashboard::headerTemplate('Administrar noticias');
 									    </div>
 									    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input id="titulo_noticia1" name="titulo_noticia1"  type="text" class="mdl-textfield__input validate" required>
+												<input id="titulo_noticia1" name="titulo_noticia1"  type="text" pattern="[a-zA-Z0-9#ñÑáÁéÉíÍóÓúÚ\s\,\:\;\.\-\+]{1,20}" maxlenght="20" class="mdl-textfield__input validate" required>
 												<label class="mdl-textfield__label" for="titulo_noticia1">Titulo</label>
 											</div>
 									    </div>
 									    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<textarea id="descripcion_noticia1" name="descripcion_noticia1" class="mdl-textfield__input validate" type="text" rows= "3" ></textarea>
+												<textarea id="descripcion_noticia1" name="descripcion_noticia1" class="mdl-textfield__input validate" type="text" pattern="[a-zA-Z0-9#ñÑáÁéÉíÍóÓúÚ\s\,\:\;\.\-\+]{1,150}" maxlenght="150" rows= "3" ></textarea>
 												<label class="mdl-textfield__label" for="description_noticia1">Descripcion</label>
 											</div>
 										</div>
@@ -127,13 +127,13 @@ Dashboard::headerTemplate('Administrar noticias');
 									    </div>
 									    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input id="titulo_noticia2" name="titulo_noticia2"  type="text" class="mdl-textfield__input validate" required>
+												<input id="titulo_noticia2" name="titulo_noticia2"  type="text"  pattern="[a-zA-Z0-9#ñÑáÁéÉíÍóÓúÚ\s\,\:\;\.\-\+]{1,20}" maxlenght="20" class="mdl-textfield__input validate" required>
 												<label class="mdl-textfield__label" for="titulo_noticia2">Titulo</label>
 											</div>
 									    </div>
 									    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<textarea id="descripcion_noticia2" name="descripcion_noticia2" class="mdl-textfield__input validate" type="text" rows= "3" ></textarea>
+												<textarea id="descripcion_noticia2" name="descripcion_noticia2" class="mdl-textfield__input validate" type="text"  pattern="[a-zA-Z0-9#ñÑáÁéÉíÍóÓúÚ\s\,\:\;\.\-\+]{1,150}" maxlenght="150" rows= "3" ></textarea>
 												<label class="mdl-textfield__label" for="description_noticia2">Descripcion</label>
 											</div>
 										</div>

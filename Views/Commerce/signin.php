@@ -24,14 +24,14 @@ Commerce::headerTemplate('Registrarse');
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">assignment_ind</i>
-                <input type="text" id="apodo" name="apodo" maxlength="100" class="validate" required/>
+                <input type="text" id="apodo" name="apodo" maxlength="100" class="validate" pattern="[A-Za-z0-9]{5,20}" required/>
                 <label for="apodo">Apodo</label>
             </div>
             <!--Validacion pattern para correo-->
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">email</i>
-                <input type="text" id="correo" name="correo" placeholder="Ingrese correo"  class="validate" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
-                <label for="dui_cliente">Correo</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingrese correo"  class="validate" required/>
+                <label for="correo">Correo</label>
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">phone</i>

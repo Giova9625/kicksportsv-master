@@ -107,7 +107,7 @@ class Clientes extends Validator
    
     public function setTelefono($value)
     {
-        if ($this->validateNaturalNumber($value,1, 8)) {
+        if ($this->validatePhone($value)) {
             $this->telefono = $value;
             return true;
         } else {

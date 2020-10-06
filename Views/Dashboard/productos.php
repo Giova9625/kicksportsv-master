@@ -87,7 +87,7 @@ Dashboard::headerTemplate('Administrar productos');
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input id="producto1" type="text" name="producto1" class="mdl-textfield__input validate" required>
+												<input id="producto1" type="text" name="producto1" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,60}" maxlength="60" class="mdl-textfield__input validate" required>
 												<label class="mdl-textfield__label" for="producto1">Nombre del producto</label>
 												
 											</div>
@@ -95,7 +95,7 @@ Dashboard::headerTemplate('Administrar productos');
 
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<textarea id="descripcion1" name="descripcion1" class="mdl-textfield__input validate" type="text" rows= "3" ></textarea>
+												<textarea id="descripcion1" name="descripcion1" class="mdl-textfield__input validate" type="text" pattern="[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s]{1,200}" maxlength="200" rows= "3" ></textarea>
 												<label class="mdl-textfield__label" for="descripcion1">Descripcion</label>
 											</div>
 										</div>
@@ -157,7 +157,7 @@ Dashboard::headerTemplate('Administrar productos');
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input id="producto2" type="text" name="producto2" class="mdl-textfield__input validate" required>
+												<input id="producto2" type="text" pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,60}" maxlength="60" name="producto2" class="mdl-textfield__input validate" required>
 												<label class="mdl-textfield__label" for="producto2">Nombre del producto</label>
 												
 											</div>
@@ -165,7 +165,7 @@ Dashboard::headerTemplate('Administrar productos');
 
 										<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<textarea id="descripcion2" name="descripcion2" class="mdl-textfield__input validate" type="text" rows= "3" ></textarea>
+												<textarea id="descripcion2" name="descripcion2" class="mdl-textfield__input validate" type="text" pattern="[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s]{1,200}" maxlength="200" rows= "3" ></textarea>
 												<label class="mdl-textfield__label" for="descripcion2">Descripcion</label>
 											</div>
 										</div>
