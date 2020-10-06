@@ -3,6 +3,10 @@ require_once('../../core/helpers/commerce.php');
 Commerce::headerTemplate('Iniciar sesión');
 ?>
 
+<?php
+$_SESSION['10']=time();  
+?>
+
 <div class="container">
     <!-- Título para la página web -->
     <h4 class="center-align indigo-text">Iniciar sesión</h4>

@@ -3,6 +3,10 @@ require_once('../../Core/Helpers/Commerce.php');
 Commerce::headerTemplate('Tienda de camisetas KickSportsv');
 ?>
 
+<?php
+include('../../core/helpers/inactividad.php'); 
+?>
+
 <!-- Slider con indicadores, altura de 400px y una duración entre transiciones de 6 segundos -->
 <div class="slider" id="slider">
     <ul class="slides">
