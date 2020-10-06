@@ -3,6 +3,10 @@ require_once('../../core/helpers/commerce.php');
 Commerce::headerTemplate('Detalles del producto');
 ?>
 
+<?php
+include('../../core/helpers/inactividad.php'); 
+?>
+
 <!-- Contenedor para mostrar el detalle del producto seleccionado previamente -->
 <div class="container">
     <!-- Título para la página web -->

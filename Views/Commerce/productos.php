@@ -3,6 +3,10 @@ require_once('../../core/helpers/commerce.php');
 Commerce::headerTemplate('Productos por Marca');
 ?>
 
+<?php
+include('../../core/helpers/inactividad.php'); 
+?>
+
 <div class="container">
     <!-- Título para la página web -->
     <h4 class="center indigo-text" id="title"></h4>

@@ -3,6 +3,10 @@ require_once('../../core/helpers/commerce.php');
 Commerce::headerTemplate('Carrito de compras');
 ?>
 
+<?php
+include('../../core/helpers/inactividad.php'); 
+?>
+
 <div class="container">
     <!-- Título para la página web -->
     <h4 class="center-align indigo-text">Carrito de compras</h4>
