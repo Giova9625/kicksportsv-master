@@ -3,6 +3,10 @@
 require_once('../../Core/Helpers/dashboard.php');
 Dashboard::headerTemplate('Administrar tallas');
 ?>
+
+<?php
+include('../../core/helpers/inactividadpriv.php'); 
+?>
 		
 		
 		

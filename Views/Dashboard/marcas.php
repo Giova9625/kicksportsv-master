@@ -2,6 +2,10 @@
 require_once('../../Core/Helpers/dashboard.php');
 Dashboard::headerTemplate('Administrar marcas');
 ?>
+
+<?php
+include('../../core/helpers/inactividadpriv.php'); 
+?>
 		
 		
 		<section class="full-width header-well">

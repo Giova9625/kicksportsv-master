@@ -3,6 +3,10 @@
 require_once('../../Core/Helpers/dashboard.php');
 Dashboard::headerTemplate('Administrar noticias');
 ?>
+
+<?php
+include('../../core/helpers/inactividadpriv.php'); 
+?>
 		<section class="full-width header-well">
 			<div class="full-width header-well-icon">
 				<i class="zmdi zmdi-image-alt"></i>

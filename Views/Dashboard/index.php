@@ -13,6 +13,11 @@
 	<link rel="stylesheet" href="../../Resources/Css/main.css">
 	
 </head>
+
+<?php
+$_SESSION['10']=time();  
+?>
+
 <body>
 	<div class="login-wrap cover">
 		<div class="container-login">

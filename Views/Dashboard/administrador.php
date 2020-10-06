@@ -4,6 +4,10 @@ require_once('../../Core/Helpers/dashboard.php');
 Dashboard::headerTemplate('Administrar usuarios');
 ?>
 
+<?php
+include('../../core/helpers/inactividadpriv.php'); 
+?>
+
 		<!--contenido de la pagina-->
 		<section class="full-width header-well">
 			<div class="full-width header-well-icon">
